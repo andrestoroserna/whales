@@ -5,6 +5,13 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import ReviewDetails from './src/screens/reviewDetails';
 import About from './src/screens/about';
+import Echolocation from './src/screens/echolocation';
+import Melody from './src/screens/melody';
+import Tallest from './src/screens/tallest';
+import Evolution from './src/screens/evolution';
+import Mammals from './src/screens/mammals';
+import Lungs from './src/screens/lungs';
+import NoFish from './src/screens/noFish';
 // import Sound from 'react-native-sound'
 import Header from './src/components/header';
 import WhaleItem from './src/components/whaleItem';
@@ -79,6 +86,13 @@ const App = () => {
     <NavigationContainer>
       <Drawer.Navigator initialRouteName='Home'>
         <Drawer.Screen name="Home" component={soundScreen} />
+        <Drawer.Screen name="Evolution" component={Evolution} />
+        <Drawer.Screen name="Mammals" component={Mammals} />
+        <Drawer.Screen name="Lungs" component={Lungs} />
+        <Drawer.Screen name="NoFish" component={NoFish} />
+        <Drawer.Screen name="Echolocation" component={Echolocation} />
+        <Drawer.Screen name="Melody" component={Melody} />
+        <Drawer.Screen name="Tallest" component={Tallest} />
         <Drawer.Screen name="About" component={About} />
       </Drawer.Navigator>
     </NavigationContainer>
