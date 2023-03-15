@@ -12,6 +12,7 @@ import {
   faMusic,
   faRulerVertical,
   faAddressCard,
+  faLanguage,
 } from '@fortawesome/free-solid-svg-icons';
 import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
@@ -27,6 +28,7 @@ import Lungs from './src/screens/lungs';
 import NoFish from './src/screens/noFish';
 // import Sound from 'react-native-sound'
 import Header from './src/components/header';
+import Translator from './src/screens/translator';
 import WhaleItem from './src/components/whaleItem';
 
 var Sound = require('react-native-sound');
@@ -131,14 +133,16 @@ const App = () => {
               icon = focused ? faBottleDroplet : faBottleDroplet;
             } else if (route.name === 'Lungs') {
               icon = focused ? faLungs : faLungs;
-            } else if (route.name === 'NoFish') {
-              icon = focused ? faFish : faFish;
+              // } else if (route.name === 'NoFish') {
+              //   icon = focused ? faFish : faFish;
             } else if (route.name === 'Echolocation') {
               icon = focused ? faMapLocationDot : faMapLocationDot;
             } else if (route.name === 'Melody') {
               icon = focused ? faMusic : faMusic;
             } else if (route.name === 'Tallest') {
               icon = focused ? faRulerVertical : faRulerVertical;
+            } else if (route.name === 'Translator') {
+              icon = focused ? faLanguage : faLanguage;
             } else if (route.name === 'About us') {
               icon = focused ? faAddressCard : faAddressCard;
             }
@@ -149,10 +153,11 @@ const App = () => {
         <Tab.Screen name="Evolution" component={Evolution} />
         <Tab.Screen name="Mammals" component={Mammals} />
         <Tab.Screen name="Lungs" component={Lungs} />
-        <Tab.Screen name="NoFish" component={NoFish} />
+        {/* <Tab.Screen name="NoFish" component={NoFish} /> */}
         <Tab.Screen name="Echolocation" component={Echolocation} />
         <Tab.Screen name="Melody" component={Melody} />
         <Tab.Screen name="Tallest" component={Tallest} />
+        <Tab.Screen name="Translator" component={Translator} />
         <Tab.Screen name="About us" component={About} />
       </Tab.Navigator>
     </NavigationContainer>
